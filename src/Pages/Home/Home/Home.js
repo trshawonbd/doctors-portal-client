@@ -1,10 +1,12 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Info from '../Info/Info';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-12'>
             <Banner></Banner>
+            <Info></Info>
         </div>
     );
 };
