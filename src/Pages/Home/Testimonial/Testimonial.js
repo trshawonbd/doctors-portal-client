@@ -3,7 +3,7 @@ import TestimonialHeader from './TestimonialHeader';
 
 const Testimonial = () => {
     return (
-        <div className='mt-12'>
+        <div className='my-12'>
             <TestimonialHeader></TestimonialHeader>
         </div>
     );

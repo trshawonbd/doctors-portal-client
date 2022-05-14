@@ -35,7 +35,7 @@ const TestimonialHeader = () => {
             <div className='flex justify-between'>
                 <div>
                     <h4 className='text-secondary text-2xl mb-4'>Testimonial</h4>
-                    <h2 className='text-6xl'>What Our Patients Says</h2>
+                    <h2 className='text-6xl mb-2'>What Our Patients Says</h2>
                 </div>
                 <div>
                     <img src={quote} className='w-24 lg:w-48' alt="" srcset="" />
