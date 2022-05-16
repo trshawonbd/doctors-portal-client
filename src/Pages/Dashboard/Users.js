@@ -5,7 +5,7 @@ import User from './User';
 
 const Users = () => {
     const { isLoading, refetch, data: users } = useQuery(['users'], () =>
-     fetch(`http://localhost:5000/user`,
+     fetch(`https://nameless-oasis-83145.herokuapp.com/user`,
      {
         method:'GET',
         headers:{
@@ -15,7 +15,7 @@ const Users = () => {
     .then(res =>
        res.json()
      )
-     
+
    )
 
    if (isLoading){
@@ -44,6 +44,7 @@ const Users = () => {
                         {
                             users?.map((user, index) => <User
                             key={index}
+                            index={index}
                             user = {user}
                             refetch ={refetch}
                             ></User>)
