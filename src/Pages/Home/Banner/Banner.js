@@ -1,6 +1,7 @@
 import React from 'react';
 import chair from '../../../assets/images/chair.png';
 import chairBg from '../../../assets/images/bg.png';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -12,7 +13,7 @@ const Banner = () => {
                 <div>
                     <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
                     <p className="py-6">our goal has been to maintain a very high standard of care and to provide our patients with the best and safest solutions.</p>
-                    <button className="btn btn-primary uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">Get Started</button>
+                    <button className="btn btn-primary uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary"><Link to='/appointment'>Get Started</Link></button>
                 </div>
             </div>
         </div>
