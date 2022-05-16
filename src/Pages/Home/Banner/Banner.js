@@ -9,7 +9,7 @@ const Banner = () => {
         style={{background: `url(${chairBg})`}}
         className="hero min-h-screen justify-center ">
             <div className="hero-content  flex-col lg:flex-row-reverse">
-                <img src={chair} className="max-w-sm rounded-lg " />
+                <img src={chair} className="max-w-sm rounded-lg" alt=''/>
                 <div>
                     <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
                     <p className="py-6">our goal has been to maintain a very high standard of care and to provide our patients with the best and safest solutions.</p>
