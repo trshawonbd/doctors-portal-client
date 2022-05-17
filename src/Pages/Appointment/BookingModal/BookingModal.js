@@ -26,7 +26,7 @@ const BookingModal = ({ treatment, setTreatment, date, refetch }) => {
             phone: event.target.phone.value
 
         }
-        const url = `https://nameless-oasis-83145.herokuapp.com/booking`;
+        const url = `http://localhost:5000/booking`;
 
         fetch(url, {
             method: 'POST',

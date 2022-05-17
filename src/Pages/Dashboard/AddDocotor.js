@@ -9,13 +9,13 @@ const AddDocotor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const { isLoading, refetch, data: services } = useQuery(['services'], () =>
-        fetch(`http://localhost:5000/service`,
-            {
+        fetch(`http://localhost:5000/service`)
+           /*  {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
-            })
+            } */
             .then(res =>
                 res.json()
             )
@@ -31,6 +31,7 @@ const AddDocotor = () => {
 
 
     const onSubmit = async data => {
+        console.log('data' , data)
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -50,11 +51,13 @@ const AddDocotor = () => {
                     speciality: data.speciality,
                     picture: img,
                 }
+                
 
                 fetch(`http://localhost:5000/doctor`,{
                     method: "POST",
                     headers: {
-                        'content-type' : 'application.json'
+                        'content-type' : 'application/json',
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
                     },
                     body: JSON.stringify(doctor)
                 })
@@ -73,9 +76,6 @@ const AddDocotor = () => {
             }
             console.log('img', result);
         })
-
-
-
     }
 
 
