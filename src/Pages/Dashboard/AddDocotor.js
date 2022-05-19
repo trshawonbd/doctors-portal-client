@@ -9,7 +9,7 @@ const AddDocotor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const { isLoading, refetch, data: services } = useQuery(['services'], () =>
-        fetch(`http://localhost:5000/service`)
+        fetch(`https://nameless-oasis-83145.herokuapp.com/service`)
            /*  {
                 method: 'GET',
                 headers: {
@@ -53,7 +53,7 @@ const AddDocotor = () => {
                 }
                 
 
-                fetch(`http://localhost:5000/doctor`,{
+                fetch(`https://nameless-oasis-83145.herokuapp.com/doctor`,{
                     method: "POST",
                     headers: {
                         'content-type' : 'application/json',

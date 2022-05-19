@@ -6,7 +6,7 @@ import ManageSingleUser from './ManageSingleUser';
 
 const ManageDoctors = () => {
     const [deleting, setDeleting] = useState(null);
-    const { data: doctors, isLoading, refetch } = useQuery('doctors', () => fetch('http://localhost:5000/doctor', {
+    const { data: doctors, isLoading, refetch } = useQuery('doctors', () => fetch('https://nameless-oasis-83145.herokuapp.com/doctor', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
